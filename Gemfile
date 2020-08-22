@@ -63,3 +63,7 @@ gem 'geocoder'
 gem "gmaps4rails"
 
 gem 'dotenv-rails'
+
+group :production do
+  gem 'pg', '>= 0.18', '< 2.0'
+end
