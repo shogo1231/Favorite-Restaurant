@@ -8,7 +8,11 @@
   </div>
   <div class="text-center">
     <h2><%= @shop.name %></h2>
-    <p><%= image_tag "#{@shop.picture}"  ,:width => '80%', :height => '60%' ,alt:'No image'%></p>
+    <% if @shop.picture.present? %>
+      <p><%= image_tag "#{@shop.picture}"  ,:width => '80%', :height => '60%' %></p>
+    <% else %>
+      <p><%= image_tag '/no image.png' ,:width => '80%', :height => '60%' %></p>
+    <% end %>
     <p><%= @shop.introduction %></p>
     <table class="table table-striped table-bordered  " border="1" style="border-collapse: collapse">
       <tr>
