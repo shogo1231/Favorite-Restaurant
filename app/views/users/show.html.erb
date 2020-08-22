@@ -1,2 +1,21 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="center jumbotron text-center">
+  <h1>あなたの投稿一覧</h1>
+</div>
+
+<div class="row mx-2">
+  <% @shop.each do |shop| %>
+    <div class="col-sm-6 col-md-4 mb-4 ">
+      <div class="card" >
+        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">No Image</text></svg>
+          <div class="card-body text-center">
+            <p><%= shop.name %></p>
+            <p><%= link_to '詳細ページへ', shop_path(shop)%></p>
+          </div>  
+      </div>
+      <div class="text-right">
+        <p><%= link_to 'この投稿を編集する', edit_shop_url(shop) %></p>
+        <p><%= link_to 'この投稿を削除する', shop, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></p>
+      </div>
+    </div>
+  <% end %>
+</div>
