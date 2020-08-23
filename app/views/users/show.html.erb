@@ -2,23 +2,23 @@
   <h1>あなたの投稿一覧</h1>
 </div>
 
-<div class="row mx-2">
+<div class="row mx-2 my-4" style=" display: flex; flex-wrap: wrap;">
   <% @shop.each do |shop| %>
-    <div class="col-sm-6 col-md-4 mb-4 ">
-      <div class="card" >
+    <div class="col-xs-10 col-sm-6 col-md-4 mb-4 ">
+      <div class="card h-100">
         <% if shop.picture.present? %>
-          <p><%= image_tag "#{shop.picture}" , :width => '100%', :height => '200px'%></p>
+          <p><%= image_tag "#{shop.picture}" , :width => '100%'%></p>
         <% else %>
           <p><%= image_tag '/no image.png',:width => '100%', :height => '100%'%></p>
         <% end %>
           <div class="card-body text-center">
             <p><%= shop.name %></p>
             <p><%= link_to '詳細ページへ', shop_path(shop),class:'btn btn-outline-success '%></p>
+            <div class="text-right">
+              <p><%= link_to 'この投稿を編集する', edit_shop_url(shop) %></p>
+              <p><%= link_to 'この投稿を削除する', shop, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></p>
+            </div>
           </div>  
-      </div>
-      <div class="text-right">
-        <p><%= link_to 'この投稿を編集する', edit_shop_url(shop) %></p>
-        <p><%= link_to 'この投稿を削除する', shop, method: :delete, data: { confirm: '本当に削除してよろしいですか？' } %></p>
       </div>
     </div>
   <% end %>

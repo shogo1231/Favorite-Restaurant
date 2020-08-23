@@ -2,12 +2,14 @@
   <h1>オススメ飲食店一覧</h1>
 </div>
 
-<div class="row mx-2">
+<div class="row mx-2" style=" display: flex; flex-wrap: wrap;">
   <% @shops.each do |shop| %>
     <div class="col-xs-10 col-sm-6 col-md-4 mb-4 ">
-      <div class="card" >
+      <div class="card h-100">
         <% if shop.picture.present? %>
-          <p><%= image_tag "#{shop.picture}" , :width => '100%', :height => '200px'%></p>
+        <div class="wrapper">
+          <div class="content"><%= image_tag "#{shop.picture}",:width => '100%'%></div>
+        </div>
         <% else %>
           <p><%= image_tag '/no image.png',:width => '100%', :height => '100%'%></p>
         <% end %>
