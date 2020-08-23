@@ -26,12 +26,9 @@ class ShopsController < ApplicationController
   end
 
   def edit
-    @user=Shop.find(params[:id]).user
-    if @user==current_user
+
       @shop=Shop.find(params[:id])
-    else
-      redirect_to :shops
-    end
+
   end
 
   def update
