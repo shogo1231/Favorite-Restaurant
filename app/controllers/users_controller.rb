@@ -1,7 +1,12 @@
 class UsersController < ApplicationController
+  before_action :require_user_logged_in, only: [:show]
   def show
     @user = User.find(params[:id])
-    @shop=@user.shops    
+    if @user==current_user
+      @shop=@user.shops 
+    else
+      redirect_to :shops
+    end
   end
 
   def new
