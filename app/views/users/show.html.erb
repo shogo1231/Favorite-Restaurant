@@ -6,7 +6,11 @@
   <% @shop.each do |shop| %>
     <div class="col-sm-6 col-md-4 mb-4 ">
       <div class="card" >
-        <svg class="bd-placeholder-img card-img-top" width="100%" height="180" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Image cap"><title>Placeholder</title><rect fill="#868e96" width="100%" height="100%"/><text fill="#dee2e6" dy=".3em" x="50%" y="50%">No Image</text></svg>
+        <% if shop.picture.present? %>
+          <p><%= image_tag "#{shop.picture}" , size: '333x200'%></p>
+        <% else %>
+          <p><%= image_tag '/no image.png',:width => '100%', :height => '100%'%></p>
+        <% end %>
           <div class="card-body text-center">
             <p><%= shop.name %></p>
             <p><%= link_to '詳細ページへ', shop_path(shop),class:'btn btn-outline-success '%></p>
