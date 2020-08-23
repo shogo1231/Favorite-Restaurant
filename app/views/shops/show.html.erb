@@ -13,7 +13,7 @@
       <% else %>
         <p><%= image_tag '/no image.png' ,:width => '80%', :height => '60%' %></p>
       <% end %>
-    <p><%= @shop.introduction %></p>
+    <p><%= simple_format(@shop.introduction) %></p>
     <table class="table table-striped table-bordered  " border="1" style="border-collapse: collapse">
       <tr>
         <td>営業時間</td>
