@@ -4,10 +4,10 @@
 
 <div class="row mx-2">
   <% @shops.each do |shop| %>
-    <div class="col-sm-6 col-md-4 mb-4 ">
+    <div class="col-xs-10 col-sm-6 col-md-4 mb-4 ">
       <div class="card" >
         <% if shop.picture.present? %>
-          <p><%= image_tag "#{shop.picture}" , size: '333x200'%></p>
+          <p><%= image_tag "#{shop.picture}" , :width => '100%', :height => '200px'%></p>
         <% else %>
           <p><%= image_tag '/no image.png',:width => '100%', :height => '100%'%></p>
         <% end %>
