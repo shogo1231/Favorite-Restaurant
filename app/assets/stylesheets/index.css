@@ -4,12 +4,16 @@
   width: 100%;
   background-size:cover;
   text-align: center;
-  padding: 150px;
+  padding: 120px;
   margin: 30px auto;
   color: white;
 }
 
-p{ font-size: calc(112.5% + 0.75vw) }
+p{ 
+  font-size: calc(112.5%+0.5vw)
+}
 
-h1 { font-size: 2.5em; }
+h1 { 
+  font-size: 2.5em;
+}
 
