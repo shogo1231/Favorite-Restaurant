@@ -1,9 +1,10 @@
-<div class="text-center">
-  <h1>ユーザ登録</h1>
-</div>
+
 
 <div class="row">
   <div class="col-sm-6 offset-sm-3">
+  <div class="card">
+    <div class="card-header text-center">ユーザ登録</div>
+    <div class="card-body">
 
     <%= form_with(model: @user, local: true) do |f| %>
       <%= render 'layouts/error_messages', model: f.object %>
@@ -29,8 +30,10 @@
       </div>
       
       <div class="col-4 offset-4">
-        <%= f.submit '登録', class: 'btn btn-primary btn-block' %>
+        <%= f.submit '登録', class: 'btn btn-outline-info offset-4' %>
       </div>
     <% end %>
+  </div>
+  </div>
   </div>
 </div>

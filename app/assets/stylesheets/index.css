@@ -1,0 +1,10 @@
+.main-container {
+  background-image: url("/cafe.png");
+  height: 400px;
+  width: 100%;
+  background-size:cover;
+  text-align: center;
+  padding: 150px;
+  margin: 30px auto;
+  color: white;
+}
