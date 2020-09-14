@@ -1,9 +1,6 @@
 <div class="main-container">
-  
   <h1>Favorite Restaurant</h1>
   <p>みんながオススメする飲食店を共有しよう！</p>
-
-
 </div>
 
 
@@ -12,4 +9,9 @@
   <p>このサイトは日本中のユーザがオススメするお店の紹介・投稿・共有が出来るサイトです。</p>
   <p>まずはユーザ登録しよう！</p>
   <%= link_to 'ユーザ登録', signup_path, class: 'btn btn-lg btn-primary' %>
+  <div class="mt-4">
+    <p>アカウントをお持ちの方はこちらから！</p>
+    <p>（リンク先にテスト用のメールアドレスとパスワードを記載してます。）</p>
+    <%= link_to 'ログイン', login_path, class: 'btn btn-lg btn-primary' %>
+  </div>
 </div>
