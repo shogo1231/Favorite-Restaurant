@@ -1,24 +1,44 @@
-# README
+# Favorite Restaurant
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+ユーザがオススメしたいお店や
 
-Things you may want to cover:
+みんなにオススメしたいお店の情報を
 
-* Ruby version
+交換・共有できるサイトです。
 
-* System dependencies
 
-* Configuration
+## 使い方
 
-* Database creation
+1　アカウントを持ってない場合アカウントの作成を行う。
+　 持っている場合はお持ちのアカウントでログインを行う。
+　
+2　ログイン後全てのユーザの投稿が表示されており
+   気になるお店があれば「詳細ページへ」ボタンを押しお店の詳細を見る。
+   
+3  画面右上の「投稿一覧」でログインユーザが投稿したお店の
+　 一覧を見る。
+　 
+4　画面右上の「投稿」でオススメしたいお店の投稿ページへ行き、各項目を
+　 入力すると投稿することが出来る。
+　 
+5　画面右上の「ログアウト」でログアウトができる。
 
-* Database initialization
+## デモ
 
-* How to run the test suite
+[デモページ](https://favorite-restaurant123198.herokuapp.com/)
 
-* Services (job queues, cache servers, search engines, etc.)
+## 開発環境
 
-* Deployment instructions
+言語：Ruby 2.5.3
 
-* ...
+フレームワーク：Ruby on rails 5.2.4.3
+
+データベース：PostgreSQL 
+
+## 文責
+
+作成者：田中　省伍
+
+## ライセンス
+
+Favorite Restaurant is under [MIT license](https://en.wikipedia.org/wiki/MIT_License).
